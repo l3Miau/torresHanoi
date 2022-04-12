@@ -1,0 +1,38 @@
+<app-header titulo="Solución Gráfica" url="/"></app-header>
+
+<ion-content>
+  <div class="ion-padding-horizontal">    
+    <ion-text color="tertiary">    
+      <h5>Objetivo:</h5>
+    </ion-text>
+    <h6>Pasar todos los discos del pilar A al pilar C, respetando las reglas del juego.</h6>    
+    
+    <ion-text color="tertiary">
+      <h5>Reglas:</h5>
+    </ion-text>
+    <h6>-Sólo se puede mover un disco cada vez.</h6>
+    <h6>-Un disco de mayor tamaño no puede descansar sobre uno más pequeño que él mismo.</h6>
+    <h6>-Sólo puedes desplazar el disco que se encuentre arriba en cada pilar.</h6>
+    <h5>Si desea reproducir de nuevo presione recargar.</h5>
+    
+    <ion-button (click)="hanoi(4, 1, 3)" color="success">
+      <ion-icon slot="start" name="checkmark-circle-outline"></ion-icon>
+      Solucionar
+    </ion-button>
+    <ion-button (click)="reload()" color="tertiary">
+      <ion-icon slot="start" name="refresh-circle-outline"></ion-icon>
+      Recargar
+    </ion-button>
+  </div>
+
+  <ion-grid style=" background: #d5f7f8;">   
+    <div class="parent">        
+      <ion-img src="/assets/pilares.png" class="pilares"></ion-img>
+    <ion-row class="discos" >
+      <ion-col class="pilar" *ngFor="let idPilar of Object.keys(estadoInicial)">                    
+          <div [class]="'disco' + disco" *ngFor="let disco of estadoInicial[idPilar]"></div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-grid>
+</ion-content>

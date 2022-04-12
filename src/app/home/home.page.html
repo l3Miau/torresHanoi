@@ -1,20 +1,27 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Torres de Hanoi</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-grid class="ion-text-center">
+    <ion-row>        
+      <ion-col>          
+        <!-- solucion grafica -->
+        <ion-button size="large" color="tertiary" routerLink="/solucion-grafica">
+          <ion-icon slot="start" name="game-controller-outline"></ion-icon>
+          Solución Gráfica
+        </ion-button>
+        
+        <!-- solucion alternativa -->      
+        <ion-button size="large" color="tertiary" routerLink="/solucion-extendida">
+          <ion-icon slot="start" name="shuffle-outline"></ion-icon>
+          Solución Extendida
+        </ion-button>
+      </ion-col>
+    </ion-row>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  </ion-grid>
+  
 </ion-content>

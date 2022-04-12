@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'solucion-grafica',
+    loadChildren: () => import('./pages/solucion-grafica/solucion-grafica.module').then( m => m.SolucionGraficaPageModule)
+  },
+  {
+    path: 'solucion-extendida',
+    loadChildren: () => import('./pages/solucion-extendida/solucion-extendida.module').then( m => m.SolucionAlternativaPageModule)
+  }
 ];
 
 @NgModule({

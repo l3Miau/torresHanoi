@@ -1,0 +1,100 @@
+.parent {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.pilares {
+  position: relative;
+  top: 0;
+  left: 0;
+  // z-index: 0;
+}
+
+.pilar{
+  height: 120px;
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.discos {
+  position: absolute;
+  top: 30%;
+  // left: 30px;
+  // z-index: 2;
+}
+
+
+$disco-largo-mayor: 80px;
+$disco-alto: 20px;
+$disco-alignment: flex-end;
+$disco-flex-direction: row;
+
+.disco1 {
+    display: flex;
+    flex-direction: $disco-flex-direction;
+    height: $disco-alto;
+    width: $disco-largo-mayor - 50px;
+    border-radius: 40px;
+    background-color: #f02abe;
+    vertical-align: $disco-alignment;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .disco2 {
+    display: flex;
+    height: $disco-alto;
+    width: $disco-largo-mayor - 40px;
+    border-radius: 40px;
+    background-color: #daec33;
+    vertical-align: $disco-alignment;
+    flex-direction: $disco-flex-direction;
+    margin-left: auto;
+    margin-right: auto;
+}
+.disco3 {
+    display: flex;
+    height: $disco-alto;
+    width: $disco-largo-mayor - 30px;
+    border-radius: 40px;
+    background-color: #f09e24;
+    vertical-align: $disco-alignment;
+    flex-direction: $disco-flex-direction;
+    margin-left: auto;
+    margin-right: auto;
+}
+.disco4 {
+    display: flex;
+    height: $disco-alto;
+    width: $disco-largo-mayor - 20px;
+    border-radius: 40px;
+    background-color: #a523d8;
+    vertical-align: $disco-alignment;
+    flex-direction: $disco-flex-direction;
+    margin-left: auto;
+    margin-right: auto;
+}
+.disco5 {
+    display: flex;
+    height: $disco-alto;
+    width: $disco-largo-mayor - 10px;
+    border-radius: 40px;
+    background-color: #1bdd25;
+    vertical-align: $disco-alignment;
+    flex-direction: $disco-flex-direction;
+    margin-left: auto;
+    margin-right: auto;
+}
+.disco6 {
+    display: flex;
+    height: $disco-alto;
+    width: $disco-largo-mayor;
+    border-radius: 40px;
+    background-color: #3198ec;
+    vertical-align: $disco-alignment;
+    flex-direction: $disco-flex-direction;
+    margin-left: auto;
+    margin-right: auto;
+}
