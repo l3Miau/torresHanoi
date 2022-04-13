@@ -44,7 +44,7 @@ export class SolucionGraficaPage implements OnInit {
     }
   }
   
-  // funcion que espera un tiempo
+  //funcion que espera un tiempo
   esperar(ms: number) {
     return new Promise( resolve => setTimeout(resolve, ms) );
   }
@@ -53,20 +53,22 @@ export class SolucionGraficaPage implements OnInit {
   //funcion que imprime y realiza los movimientos
   async movimiento(inicio: PilarHanoi, fin: PilarHanoi) {
     console.log(inicio + ' -> ' + fin)
-    // Tomar el disco del pilar inicio
+    //tomar el disco del pilar inicio
     const discoPorMover = this.estadoInicial[inicio].shift();
 
     await this.esperar(500);
 
-    // Poner el disco en el pilar final
+    //poner el disco en el pilar final
     this.estadoInicial[fin].unshift(discoPorMover)
 
     await this.esperar(500);
 
-    console.table(this.estadoInicial);
+    // console.table(this.estadoInicial);
   }
 
+  //funcion para recargar la pagina
   reload() {
+    console.log('Recargando...');
     window.location.reload();
   }
 }
